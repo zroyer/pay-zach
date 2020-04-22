@@ -1,5 +1,6 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 
 	let stripeLoaded = false;
 	let payment = null;
@@ -38,7 +39,7 @@
 		step=1
 		inputmode=numeric />
 	{#if payment > 0}
-		<div class='info' transition:slide>
+		<div class='info' transition:slide="{{delay: 250, duration: 500, easing: quintOut }}">
 			<div class='row' >
 				<span>Fees: </span>
 				<span>${Number.parseFloat(fees).toFixed(2)}</span>
