@@ -5,6 +5,6 @@
   port = 4444
 
 [build]
-  command = "cd functions && npm i && cd .."
-  publish = "public"
+  command = "npm run build"
   functions = "functions"
+  publish = "public"

@@ -2,7 +2,8 @@
   "name": "pay-zach",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
+    "functions": "cd functions && npm i && cd ..",
+    "build": "rollup -c && npm run functions",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
