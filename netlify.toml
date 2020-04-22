@@ -1,3 +1,4 @@
 [dev]
     command="yarn dev"
     publish="public"
+    functions = "functions"
