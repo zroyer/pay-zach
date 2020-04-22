@@ -33,7 +33,7 @@
 	<h2><i>Pay Zach</i></h2>
 	<input
 		bind:value={payment}
-		placeholder='Payment ($)'
+		placeholder='$'
 		type=number
 		min=1
 		step=1
@@ -69,7 +69,7 @@
 		margin-block-start: 0;
 	}
 
-	input, div, button {
+	input, button {
 		width: 12rem;
 		font-size: 1.1em;
 	}
@@ -82,7 +82,7 @@
 	}
 
 	.row {
-		width: 12rem;
+		width: 100%;
 		margin: 0 0 1rem 0;
 		display: flex;
 		flex-direction: row;
