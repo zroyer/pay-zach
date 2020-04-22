@@ -1,4 +1,10 @@
 [dev]
-    command="npm run build"
-    publish="public"
-    functions = "functions"
+  command = "npm run dev"
+  functions = "functions"
+  publish = "public"
+  port = 4444
+
+[build]
+  command = "npm run functions"
+  publish = "public"
+  functions = "functions"

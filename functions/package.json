@@ -1,0 +1,14 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "payzach netlify functions",
+  "main": "checkout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@zroyer",
+  "license": "ISC",
+  "dependencies": {
+    "stripe": "^8.44.0"
+  }
+}
