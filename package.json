@@ -5,7 +5,7 @@
     "functions": "cd functions && npm i && cd ..",
     "build": "rollup -c && npm run functions",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public --single"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
@@ -17,6 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@sveltech/routify": "^1.1.1-1",
     "sirv-cli": "^0.4.4"
   }
 }
