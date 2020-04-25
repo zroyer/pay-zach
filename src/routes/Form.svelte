@@ -71,14 +71,6 @@
 </main>
 
 <style>
-  main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   h2 {
     margin-block-start: 0;
   }

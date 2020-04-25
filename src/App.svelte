@@ -14,3 +14,21 @@
     <Route path='/'><Form /></Route>
   </div>
 </Router>
+
+<style>
+	:global(main) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  :global(a) {
+    color: #333 !important;
+  }
+  :global(h2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
