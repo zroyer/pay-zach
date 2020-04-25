@@ -1,6 +1,5 @@
 <script>
-  import { Router, goto } from '@sveltech/routify';
-  import { routes } from '@sveltech/routify/tmp/routes';
+  import { goto } from '@sveltech/routify';
   import { slide } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import Spinner from 'svelte-spinner';
