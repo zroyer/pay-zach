@@ -16,6 +16,9 @@
 </Router>
 
 <style>
+	:global(body) {
+    padding: 0;
+  }
 	:global(main) {
     height: 100vh;
     display: flex;
