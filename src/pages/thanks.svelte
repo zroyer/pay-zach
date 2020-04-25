@@ -3,8 +3,7 @@
 </script>
 
 <main>
-    <h3>Thanks!</h3>
-    <a href={$url('/index')}>Feeling generous?</a>
+    <a href={$url('/index')}><h2>Thanks!</h2></a>
 </main>
 
 <style>
@@ -15,8 +14,7 @@
     justify-content: center;
     align-items: center;
   }
-
-  h3 {
-    margin-block-start: 0;
+  a {
+    color: #333;
   }
 </style>
