@@ -6,10 +6,12 @@
 
   let stripeLoaded = false;
   let payment = null;
+  let isLoading = false;
   $: fees = payment * 0.03;
   $: total = payment + fees;
 
   const handleSubmit = async () => {
+    isLoading = true;
     const response = await fetch('/.netlify/functions/checkout', {
       method: 'POST',
       headers: {
@@ -40,7 +42,7 @@
       min=1
       step=1
       inputmode=numeric />
-    {#if payment > 0}
+    {#if payment && payment > 0}
       <div class='info' transition:slide='{{delay: 250, duration: 500, easing: quintOut }}'>
         <div class='row'>
           <span>Fees: </span>
@@ -54,8 +56,8 @@
     {/if}
     <button
       on:click|preventDefault={handleSubmit}
-      disabled={!stripeLoaded || (!payment || payment < 1)}
-    >Pay</button>
+      disabled={!stripeLoaded || (!payment || payment < 1) || isLoading}
+    >{#if isLoading}Thanks!{:else}Pay{/if}</button>
   </form>
 </main>
 
