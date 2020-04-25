@@ -3,6 +3,20 @@
 </script>
 
 <main>
-    <h2>Thanks!</h2>
+    <h3>Thanks!</h3>
     <a href={$url('/index')}>Feeling generous?</a>
 </main>
+
+<style>
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h3 {
+    margin-block-start: 0;
+  }
+</style>

@@ -1,10 +1,22 @@
 <script>
-  import { url } from "@sveltech/routify";
+    import { url } from "@sveltech/routify";
 </script>
 
 <main>
-  <header>
-    <h2>Uh oh, something went wrong...</h2>
+    <h3>Uh oh, something went wrong...</h3>
     <a href={$url('/index')}>Try again?</a>
-  </header>
 </main>
+
+<style>
+	main {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h3 {
+		margin-block-start: 0;
+	}
+</style>
