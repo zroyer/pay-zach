@@ -100,10 +100,12 @@
   .row {
     width: 100%;
     margin: 0 0 1rem 0;
+    padding: 0 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
   }
 </style>
 
