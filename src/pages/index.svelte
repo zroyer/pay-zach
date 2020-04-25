@@ -3,6 +3,7 @@
   import { routes } from '@sveltech/routify/tmp/routes';
   import { slide } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
+  import Spinner from 'svelte-spinner';
 
   let stripeLoaded = false;
   let payment = null;
@@ -57,7 +58,18 @@
     <button
       on:click|preventDefault={handleSubmit}
       disabled={!stripeLoaded || (!payment || payment < 1) || isLoading}
-    >{#if isLoading}Thanks!{:else}Pay{/if}</button>
+    >
+      {#if isLoading}
+        <Spinner
+          size='22'
+          speed='1000'
+          color='#999999'
+          thickness='2'
+          gap='30' />
+      {:else}
+        Pay
+      {/if}
+    </button>
   </form>
 </main>
 
@@ -84,10 +96,19 @@
   input, button {
     font-size: 1.1em;
     width: 100%;
+    height: 2.25rem;
   }
 
   button {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
   }
 
   .info {
